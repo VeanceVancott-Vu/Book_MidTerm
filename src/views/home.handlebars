@@ -1,0 +1,39 @@
+<h2>Book List</h2>
+
+{{#if books}}
+
+<table border="1" cellpadding="8" cellspacing="0">
+
+    <thead>
+        <tr>
+            <th>Product Code</th>
+            <th>Book Name</th>
+            <th>Original Price</th>
+            <th>VAT</th>
+            <th>Final Price</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        {{#each books}}
+
+        <tr>
+            <td>{{productCode}}</td>
+            <td>{{name}}</td>
+            <td>{{originalPrice}}</td>
+            <td>{{vatRate}}%</td>
+            <td>{{finalPrice}}</td>
+        </tr>
+
+        {{/each}}
+
+    </tbody>
+
+</table>
+
+{{else}}
+
+<p>No books found in the database.</p>
+
+{{/if}}
